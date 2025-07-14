@@ -1,0 +1,149 @@
+/* ====== MODERNIZED FRONT PAGE ====== */
+
+/* 1. BACKGROUND */
+.root, .anchor-pane, AnchorPane {
+    -fx-background-color: #F8F9FA;
+    -fx-font-family: 'Segoe UI', 'Calibri', Arial, sans-serif;
+}
+
+/* 2. HEADER */
+.header-bar {
+    -fx-background-color: transparent;
+    -fx-padding: 24 0 8 30;
+    -fx-effect: none;
+}
+.header-title {
+    -fx-text-fill: #232323;
+    -fx-font-family: 'Segoe UI', 'Calibri', Arial, sans-serif;
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, #355C7D22, 2,0,0,1);
+}
+
+/* 3. MODERN CARDS */
+.dashboard-card {
+    -fx-background-color: #FFFDF6;
+    -fx-border-radius: 14px;
+    -fx-background-radius: 20px;
+    -fx-border-color: #34495E22;
+    -fx-border-width: 2px;
+    -fx-padding: 18 18 18 18;
+    -fx-effect: dropshadow(gaussian, #34495E33, 12, 0.14, 0, 4);
+    -fx-spacing: 10;
+}
+.dashboard-card-title {
+    -fx-text-fill: #355C7D;
+    -fx-font-size: 15px;
+    -fx-font-family: 'Segoe UI Semibold', 'Calibri', Arial, sans-serif;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 6 0;
+}
+.dashboard-list {
+    -fx-background-radius: 12px;
+    -fx-border-radius: 12px;
+    -fx-background-color: #F8F9FA;
+    -fx-border-color: #e1e4ec;
+}
+
+/* 4. BUTTONS */
+.button, Button {
+    -fx-background-color: #355C7D;
+    -fx-text-fill: #fff;
+    -fx-background-radius: 8px;
+    -fx-font-size: 16px;
+    -fx-font-weight: 600;
+    -fx-cursor: hand;
+    -fx-padding: 8 22 8 22;
+    -fx-effect: dropshadow(gaussian, #355C7D22, 2,0,0,1);
+    -fx-border-width: 0;
+    -fx-border-color: transparent;
+    -fx-transition: background-color 0.18s, scale 0.18s;
+}
+.button:hover, Button:hover {
+    -fx-background-color: #FF6F61;
+    -fx-scale-x: 1.04;
+    -fx-scale-y: 1.04;
+}
+.button:pressed, Button:pressed {
+    -fx-background-color: #34495E;
+    -fx-scale-x: 0.97;
+    -fx-scale-y: 0.97;
+}
+#searchButton {
+    -fx-background-color: #fff;
+    -fx-text-fill: #FF6F61;
+    -fx-border-color: #FF6F61;
+    -fx-border-width: 2;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-font-size: 20px;
+    -fx-padding: 0 8 0 8;
+}
+#searchButton:hover {
+    -fx-background-color: #FF6F61;
+    -fx-text-fill: #fff;
+}
+
+/* 5. SEARCH FIELD */
+.search-input, TextField {
+    -fx-background-color: #fff;
+    -fx-border-color: #355C7D;
+    -fx-border-radius: 8px;
+    -fx-font-size: 15px;
+    -fx-prompt-text-fill: #9da1a7;
+    -fx-padding: 8 16 8 16;
+    -fx-effect: dropshadow(gaussian, #355C7D15, 2,0,0,1);
+}
+.search-input:focused, TextField:focused {
+    -fx-border-color: #FF6F61;
+    -fx-background-color: #FFF7F4;
+}
+
+::-fx-prompt-text {
+    -fx-font-size: 14px;
+    -fx-text-fill: #adb0b8;
+}
+
+/* 6. HOVER CARD EFFECT */
+.dashboard-card:hover {
+    -fx-effect: dropshadow(gaussian, #355C7D33, 22, 0.23, 0, 6);
+    -fx-translate-y: -3;
+    -fx-background-color: #FFFAF6;
+}
+
+/* 7. SCROLL BAR STYLE (Optional, modern minimal) */
+.scroll-bar:vertical, .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+.thumb {
+    -fx-background-color: #c8d2e1;
+    -fx-background-radius: 8px;
+}
+
+/* 8. PROCEED BUTTON BOTTOM RIGHT */
+#proceedButton {
+    -fx-background-color: #355C7D;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 9px;
+    -fx-padding: 8 32 8 32;
+    -fx-effect: dropshadow(gaussian, #355C7D11, 2,0,0,1);
+    -fx-translate-y: 0;
+}
+#proceedButton:hover {
+    -fx-background-color: #FF6F61;
+    -fx-translate-y: -2;
+}
+
+/* header */
+.header-bar {
+    -fx-background-color: #34495E;
+    -fx-effect: dropshadow(gaussian, #00000030, 12, 0.18, 0, 3);
+}
+.header-title {
+    -fx-text-fill: #fff;
+    -fx-font-size: 28px;
+    -fx-font-family: 'Segoe UI Semibold', 'Calibri', Arial, sans-serif;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 0 12;
+}

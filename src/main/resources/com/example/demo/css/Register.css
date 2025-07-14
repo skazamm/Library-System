@@ -1,0 +1,150 @@
+/* ====== REGISTER FORM STYLES ====== */
+
+/* General background and font */
+.root, .anchor-pane, AnchorPane {
+    -fx-background-color: #F8F9FA;
+    -fx-font-family: 'Segoe UI', 'Calibri', Arial, sans-serif;
+}
+
+/* Header Bar */
+.header-bar {
+    -fx-background-color: #34495E;
+    -fx-background-radius: 0 0 18px 18px;
+    -fx-effect: dropshadow(gaussian, #00000033, 8, 0.16, 0, 2);
+}
+
+.header-title {
+    -fx-text-fill: #fff;
+    -fx-font-size: 28px;
+    -fx-font-family: 'Segoe UI Semibold', 'Calibri', Arial, sans-serif;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+}
+
+/* Panel for the illustration (left side) */
+.illustration-pane {
+    -fx-background-color: #f3f7fb;
+    -fx-background-radius: 0 30px 30px 0;
+    -fx-effect: dropshadow(gaussian, #34495E22, 12, 0.13, 0, 2);
+}
+.illustration-image {
+    -fx-effect: dropshadow(gaussian, #34495E44, 8, 0.13, 0, 2);
+    -fx-background-radius: 24px;
+}
+.illustration-caption {
+    -fx-font-size: 16px;
+    -fx-text-fill: #34495E;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-padding: 16 0 0 0;
+}
+
+/* Panel for the form (right side) */
+.form-pane {
+    -fx-background-color: #fff;
+    -fx-background-radius: 30px;
+    -fx-effect: dropshadow(gaussian, #b7c7d9, 8, 0.10, 0, 2);
+}
+
+/* Section label ("Enter your Details", "Birthday") */
+.form-section-label {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #355C7D;
+    -fx-padding: 20 0 16 0;
+}
+
+.form-label, Label {
+    -fx-font-size: 14px;
+    -fx-font-weight: 500;
+    -fx-text-fill: #34495E;
+}
+
+/* Input fields */
+.input-field, TextField, PasswordField, ComboBox {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #355C7D;
+    -fx-border-radius: 7px;
+    -fx-font-size: 14px;
+    -fx-prompt-text-fill: #b3b8c6;
+    -fx-padding: 7 12 7 12;
+}
+.input-field:focused, TextField:focused, PasswordField:focused, ComboBox:focused {
+    -fx-border-color: #FF6F61;
+    -fx-background-color: #fff;
+}
+
+.combo-box, ComboBox {
+    -fx-background-radius: 7px;
+    -fx-background-color: #f8f9fa;
+}
+
+/* Register button */
+.form-btn, #registerButton, Button {
+    -fx-background-color: #355C7D;
+    -fx-background-radius: 8px;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #fff;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, #355C7D22, 2, 0.08, 0, 1);
+    -fx-padding: 10 0 10 0;
+    -fx-transition: background-color 0.18s;
+}
+.form-btn:hover, #registerButton:hover, Button:hover {
+    -fx-background-color: #FF6F61;
+}
+.form-btn:focused, #registerButton:focused, Button:focused {
+    -fx-border-color: #FF6F61;
+    -fx-border-width: 2px;
+}
+
+/* Error/feedback message */
+.form-message, #messageLabel {
+    -fx-text-fill: #E74C3C;
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+    -fx-padding: 2 0 0 0;
+}
+
+/* Back button styling */
+#backImage {
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, #34495E22, 4, 0.13, 0, 1);
+}
+
+/* Birthday label */
+#birthdayLabel {
+    -fx-font-size: 13px;
+    -fx-font-weight: 500;
+    -fx-text-fill: #34495E;
+}
+
+/* Responsive tweaks (optional) */
+@media screen and (max-width: 800px) {
+    .illustration-pane { -fx-background-radius: 0; }
+    .form-pane { -fx-background-radius: 0; }
+}
+
+/* ==== ACCENT CARD PANEL (Register & Login) ==== */
+.illustration-pane {
+    -fx-background-color: #F3F7FB;
+    -fx-background-radius: 38px;
+    -fx-effect: dropshadow(gaussian, #34495E22, 16, 0.14, 0, 6);
+}
+
+/* The illustration image itself */
+.illustration-image {
+    -fx-effect: dropshadow(gaussian, #34495E44, 10, 0.19, 0, 4);
+    -fx-background-radius: 28px;
+}
+
+/* Caption under image */
+.illustration-caption {
+    -fx-text-fill: #34495E;
+    -fx-font-size: 18px;
+    -fx-font-family: 'Segoe UI Semibold', 'Calibri', Arial, sans-serif;
+    -fx-font-weight: 700;
+    -fx-padding: 10 0 0 0;
+    -fx-alignment: center;
+}

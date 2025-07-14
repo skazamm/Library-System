@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="714.0" prefWidth="914.0" stylesheets="@../css/FrontPage.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controllers.FrontPageController">
+
+   <!-- HEADER BAR WITH LOGO AND ACTION BUTTONS -->
+   <AnchorPane prefHeight="84.0" prefWidth="914.0" styleClass="header-bar" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+         <!-- Logo + Title (Left) -->
+         <HBox alignment="CENTER_LEFT" spacing="16.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="0.0">
+            <children>
+               <!-- Logo (update the url for your logo) -->
+               <ImageView fitHeight="70.0" fitWidth="103.0" preserveRatio="true">
+                  <image>
+                     <Image url="@../Images/logo.png" />
+                  </image>
+               </ImageView>
+               <Label prefHeight="61.0" prefWidth="362.0" styleClass="header-title" text="Library Management" />
+            </children>
+         </HBox>
+         <!-- Actions (Right) -->
+         <HBox alignment="CENTER_RIGHT" spacing="14.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="38.0" AnchorPane.topAnchor="0.0">
+            <children>
+               <Button onAction="#handleAbout" styleClass="secondary-btn" text="About" />
+               <Button onAction="#handleHelp" styleClass="secondary-btn" text="Help" />
+               <Button onAction="#handleReference" styleClass="secondary-btn" text="References" />
+            </children>
+         </HBox>
+      </children>
+   </AnchorPane>
+
+   <!-- DASHBOARD CARDS ROW -->
+   <HBox alignment="CENTER" layoutX="40.0" layoutY="202.0" spacing="32.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="202.0">
+      <children>
+         <!-- Recent Books Card -->
+         <VBox alignment="TOP_CENTER" prefHeight="260.0" prefWidth="250.0" spacing="12.0" styleClass="dashboard-card">
+            <children>
+               <Label styleClass="dashboard-card-title" text="📚 Recent Books Added" />
+               <ListView fx:id="recentBooksList" prefHeight="174.0" prefWidth="246.0" styleClass="dashboard-list" />
+            </children>
+         </VBox>
+         <!-- Recent Users Card -->
+         <VBox alignment="TOP_CENTER" prefHeight="260.0" prefWidth="250.0" spacing="12.0" styleClass="dashboard-card">
+            <children>
+               <Label styleClass="dashboard-card-title" text="👤 Recent Registered Users" />
+               <ListView fx:id="recentUsersList" prefHeight="200.0" styleClass="dashboard-list" />
+            </children>
+         </VBox>
+         <!-- Near Overdue Card -->
+         <VBox alignment="TOP_CENTER" prefHeight="260.0" prefWidth="250.0" spacing="12.0" styleClass="dashboard-card">
+            <children>
+               <Label styleClass="dashboard-card-title" text="⏰ Books Near Overdue" />
+               <ListView fx:id="nearOverdueList" prefHeight="190.0" prefWidth="263.0" styleClass="dashboard-list" />
+            </children>
+         </VBox>
+      </children>
+   </HBox>
+
+   <!-- SEARCH AND NOTIFICATION ROW -->
+   <HBox alignment="CENTER" spacing="12.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="400.0" />
+
+   <!-- Proceed Button: Bottom-right corner -->
+   <Button fx:id="proceedButton" layoutX="750.0" layoutY="650.0" mnemonicParsing="false" onAction="#handleProceed" prefHeight="35.0" prefWidth="138.0" styleClass="primary-btn" text="Proceed" />
+   <TextField fx:id="searchField" layoutX="327.0" layoutY="594.0" prefWidth="240.0" promptText="Search books..." styleClass="search-input" />
+   <Button fx:id="searchButton" layoutX="578.0" layoutY="598.0" onAction="#handleSearchBooks" styleClass="action-btn" text="🔔" />
+</AnchorPane>

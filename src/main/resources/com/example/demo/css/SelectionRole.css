@@ -1,0 +1,89 @@
+/* ====== ROLE SELECTOR STYLES (Enhanced) ====== */
+
+/* Background */
+.selection-root, .role-selector-root, .anchor-pane, AnchorPane {
+    -fx-background-color: #F8F9FA;
+}
+
+/* Header card bar (the blue bar behind the label) */
+.selector-header-bar {
+    -fx-background-color: #34495E;
+    -fx-background-radius: 16px;
+    -fx-effect: dropshadow(gaussian, #23232333, 8, 0.18, 0, 2);
+    -fx-padding: 0 0 0 0;
+}
+
+/* Header text label */
+.selector-header-label {
+    -fx-text-fill: #fff;
+    -fx-font-size: 22px;
+    -fx-font-family: 'Segoe UI Semibold', 'Calibri', Arial, sans-serif;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-padding: 10 0 10 0;
+    -fx-background-radius: 16px;
+}
+
+/* Avatar/image styling */
+.role-avatar, .role-image, ImageView {
+    -fx-effect: dropshadow(gaussian, #34495E44, 8, 0.2, 0, 2);
+    -fx-background-radius: 18px;
+}
+
+/* "What is your role?" label */
+.selector-role-label {
+    -fx-font-size: 16px;
+    -fx-font-family: 'Segoe UI', 'Calibri', Arial, sans-serif;
+    -fx-text-fill: #34495E;
+    -fx-font-weight: 600;
+    -fx-padding: 6 0 12 0;
+}
+
+/* Modern Button Styles (role selector) */
+.role-btn, .student-btn, .librarian-btn, Button {
+    -fx-background-color: #355C7D;
+    -fx-background-radius: 10px;
+    -fx-font-family: 'Segoe UI', 'Calibri', Arial, sans-serif;
+    -fx-font-size: 17px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #fff;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, #355C7D33, 2, 0.08, 0, 1);
+    -fx-padding: 10 0 10 0;
+    -fx-border-color: transparent;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 10px;
+    -fx-transition: background-color 0.16s, scale 0.13s;
+    -fx-scale-x: 1.0;
+    -fx-scale-y: 1.0;
+    -fx-translate-y: 0;
+    -fx-opacity: 1.0;
+    -fx-box-shadow: 0 4px 12px 0 #34495E11;
+}
+
+/* Hover animation */
+.role-btn:hover, .student-btn:hover, .librarian-btn:hover, Button:hover {
+    -fx-background-color: #FF6F61;
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, #FF6F6130, 7, 0.19, 0, 3);
+}
+
+/* Press/click effect */
+.role-btn:pressed, .student-btn:pressed, .librarian-btn:pressed, Button:pressed {
+    -fx-background-color: #232323;
+    -fx-scale-x: 0.97;
+    -fx-scale-y: 0.97;
+    -fx-translate-y: 2;
+}
+
+/* Focus border */
+.role-btn:focused, .student-btn:focused, .librarian-btn:focused, Button:focused {
+    -fx-border-color: #FF6F61;
+    -fx-border-width: 2.5px;
+}
+
+/* Optional: soft shadow on the card for more depth */
+VBox, .role-selector-root {
+    -fx-effect: dropshadow(gaussian, #34495E18, 20, 0.14, 0, 7);
+}

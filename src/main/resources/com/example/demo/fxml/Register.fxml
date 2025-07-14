@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="714.0" prefWidth="914.0" stylesheets="@../css/Register.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controllers.RegisterController">
+
+   <!-- HEADER BAR -->
+   <AnchorPane layoutY="0.0" prefHeight="83.0" prefWidth="914.0" styleClass="header-bar">
+      <children>
+         <Label layoutX="390.0" layoutY="17.0" prefHeight="49.0" prefWidth="150.0" styleClass="header-title" text="Register" />
+         <ImageView fx:id="backImage" fitHeight="36.0" fitWidth="55.0" layoutX="22.0" layoutY="22.0" onMouseClicked="#handleBack" pickOnBounds="true" preserveRatio="true" styleClass="back-btn">
+            <image>
+               <Image url="@../Images/back.png" />
+            </image></ImageView>
+      </children>
+   </AnchorPane>
+
+   <!-- LEFT ACCENT PANEL WITH MODERN ILLUSTRATION -->
+   <AnchorPane layoutY="81.0" prefHeight="457.0" prefWidth="420.0" styleClass="illustration-pane">
+      <children>
+         <ImageView fitHeight="350.0" fitWidth="340.0" layoutX="38.0" layoutY="120.0" preserveRatio="true" styleClass="illustration-image">
+            <image>
+               <Image url="@../Images/lib.png" />
+            </image>
+         </ImageView>
+         <Label layoutX="97.0" layoutY="397.0" styleClass="illustration-caption" text="Join our library community!" />
+      </children>
+   </AnchorPane>
+
+   <!-- RIGHT FORM PANEL -->
+   <AnchorPane layoutX="420.0" layoutY="83.0" prefHeight="631.0" prefWidth="494.0" styleClass="form-pane">
+      <children>
+         <Label layoutX="40.0" layoutY="36.0" styleClass="form-section-label" text="Enter your Details" />
+         <TextField fx:id="usernameField" layoutX="40.0" layoutY="90.0" prefHeight="32.0" prefWidth="410.0" promptText="User name" styleClass="input-field" />
+         <TextField fx:id="nameField" layoutX="40.0" layoutY="138.0" prefHeight="32.0" prefWidth="410.0" promptText="Full name" styleClass="input-field" />
+         <PasswordField fx:id="passwordField" layoutX="40.0" layoutY="186.0" prefHeight="32.0" prefWidth="410.0" promptText="Password" styleClass="input-field" />
+         <PasswordField fx:id="confirmPasswordField" layoutX="40.0" layoutY="234.0" prefHeight="32.0" prefWidth="410.0" promptText="Confirm password" styleClass="input-field" />
+         <TextField fx:id="emailField" layoutX="40.0" layoutY="282.0" prefHeight="32.0" prefWidth="410.0" promptText="Email address" styleClass="input-field" />
+         <TextField fx:id="contactNumberField" layoutX="40.0" layoutY="330.0" prefHeight="32.0" prefWidth="410.0" promptText="Contact number" styleClass="input-field" />
+         <Label layoutX="40.0" layoutY="378.0" styleClass="form-label" text="Birthday" />
+         <ComboBox fx:id="monthComboBox" layoutX="40.0" layoutY="404.0" prefHeight="44.0" prefWidth="124.0" promptText="Month" styleClass="input-field" />
+         <ComboBox fx:id="dateComboBox" layoutX="183.0" layoutY="404.0" prefHeight="44.0" prefWidth="124.0" promptText="Date" styleClass="input-field" />
+         <ComboBox fx:id="yearComboBox" layoutX="326.0" layoutY="404.0" prefHeight="44.0" prefWidth="124.0" promptText="Year" styleClass="input-field" />
+         <Button fx:id="registerButton" layoutX="40.0" layoutY="478.0" onAction="#handleRegister" prefHeight="38.0" prefWidth="410.0" styleClass="form-btn" text="Register" />
+         <Label fx:id="messageLabel" layoutX="40.0" layoutY="510.0" prefHeight="27.0" prefWidth="410.0" styleClass="form-message" />
+      </children>
+   </AnchorPane>
+
+</AnchorPane>

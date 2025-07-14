@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="526.0"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.demo.controllers.MyBorrowedBooksDialogController"
+            stylesheets="@../css/Dialog.css">
+
+    <children>
+        <!-- Main Card -->
+        <VBox spacing="18.0"
+              AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0"
+              styleClass="dialog-card">
+            <children>
+                <!-- Header -->
+                <Label text="My Borrowed Books" styleClass="dialog-title"/>
+
+                <!-- Table -->
+                <TableView fx:id="borrowedBooksTable" prefHeight="270.0" prefWidth="490.0" styleClass="main-table">
+                    <columns>
+                        <TableColumn fx:id="titleColumn" prefWidth="150" text="Title" />
+                        <TableColumn fx:id="borrowDateColumn" prefWidth="100" text="Borrow Date" />
+                        <TableColumn fx:id="dueDateColumn" prefWidth="100" text="Due Date" />
+                        <TableColumn fx:id="statusColumn" prefWidth="80" text="Status" />
+                        <TableColumn fx:id="actionColumn" prefWidth="60" text="Action" />
+                    </columns>
+                </TableView>
+
+                <!-- Button Row -->
+                <HBox alignment="CENTER_RIGHT" spacing="10.0">
+                    <Button onAction="#handleClose" text="Close" styleClass="form-btn secondary-btn"/>
+                </HBox>
+            </children>
+            <padding>
+                <Insets bottom="18" left="18" right="18" top="18" />
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>

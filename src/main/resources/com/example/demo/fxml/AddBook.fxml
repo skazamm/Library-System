@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="350" prefWidth="400"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.demo.controllers.AddBookController"
+            stylesheets="@../css/Librarian.css">
+    <children>
+        <Label layoutX="140" layoutY="20" text="Add New Book" styleClass="header-title addbook-label">
+            <font>
+                <Font name="Segoe UI Bold" size="20" />
+            </font>
+        </Label>
+        <Label layoutX="30" layoutY="70" text="Title:" styleClass="form-label"/>
+        <TextField fx:id="titleField" layoutX="120" layoutY="65" prefWidth="230" styleClass="form-input"/>
+
+        <Label layoutX="30" layoutY="110" text="Author:" styleClass="form-label"/>
+        <TextField fx:id="authorField" layoutX="120" layoutY="105" prefWidth="230" styleClass="form-input"/>
+
+        <Label layoutX="30" layoutY="150" text="ISBN:" styleClass="form-label"/>
+        <TextField fx:id="isbnField" layoutX="120" layoutY="145" prefWidth="230" styleClass="form-input"/>
+
+        <Label layoutX="30" layoutY="190" text="Status:" styleClass="form-label"/>
+        <ComboBox fx:id="statusComboBox" layoutX="120.0" layoutY="186.0" prefHeight="26.0" prefWidth="230.0" styleClass="form-input"/>
+
+        <Label layoutX="30" layoutY="230" text="Copies:" styleClass="form-label"/>
+        <TextField fx:id="copiesField" layoutX="120" layoutY="225" prefWidth="230" styleClass="form-input"/>
+
+        <Button fx:id="addButton" layoutX="120" layoutY="275" onAction="#handleAddBook" prefWidth="230" text="Add Book" styleClass="primary-btn"/>
+        <Label fx:id="messageLabel" layoutX="120" layoutY="310" textFill="red" styleClass="message-label"/>
+    </children>
+</AnchorPane>

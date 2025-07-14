@@ -1,0 +1,97 @@
+/* ==== MAIN LAYOUT ==== */
+.form-pane {
+    -fx-background-color: #F3F7FB;
+    -fx-background-radius: 0 0 0 38px;
+}
+.illustration-pane {
+    -fx-background-color: #F8F9FA;
+    -fx-background-radius: 0 38px 38px 0;
+}
+
+/* ==== HEADER ==== */
+.header-bar {
+    -fx-background-color: #34495E;
+    -fx-background-radius: 0 0 28px 0;
+    -fx-effect: dropshadow(gaussian, #23232333, 7, 0.17, 0, 2);
+}
+.header-title {
+    -fx-text-fill: #fff;
+    -fx-font-size: 28px;
+    -fx-font-family: 'Segoe UI Semibold', 'Calibri', Arial, sans-serif;
+    -fx-font-weight: bold;
+}
+
+/* ==== FORM ==== */
+.input-field, .password-field, TextField, PasswordField {
+    -fx-background-color: #fff;
+    -fx-border-color: #355C7D;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-font-size: 15px;
+    -fx-padding: 0 12 0 12;
+}
+.input-field:focused, .password-field:focused, TextField:focused, PasswordField:focused {
+    -fx-border-color: #FF6F61;
+}
+
+.form-btn, Button {
+    -fx-background-color: #355C7D;
+    -fx-background-radius: 8px;
+    -fx-font-size: 16px;
+    -fx-font-family: 'Segoe UI Semibold', 'Calibri', Arial, sans-serif;
+    -fx-font-weight: bold;
+    -fx-text-fill: #fff;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, #355C7D33, 2, 0.08, 0, 1);
+    -fx-border-color: transparent;
+    -fx-padding: 8 0 8 0;
+    -fx-transition: background-color 0.18s;
+}
+.form-btn:hover, Button:hover {
+    -fx-background-color: #FF6F61;
+}
+.form-btn:focused, Button:focused {
+    -fx-border-color: #FF6F61;
+    -fx-border-width: 2px;
+}
+
+.form-section-label {
+    -fx-font-size: 18px;
+    -fx-font-family: 'Segoe UI Semibold', 'Calibri', Arial, sans-serif;
+    -fx-font-weight: bold;
+    -fx-text-fill: #34495E;
+}
+.form-checkbox {
+    -fx-font-size: 15px;
+    -fx-text-fill: #34495E;
+}
+.form-message {
+    -fx-text-fill: #E74C3C;
+    -fx-font-size: 14px;
+    -fx-font-family: 'Segoe UI', 'Calibri', Arial, sans-serif;
+}
+
+/* ==== ILLUSTRATION CARD ==== */
+.illustration-card {
+    -fx-background-color: #fff;
+    -fx-background-radius: 32px;
+    -fx-effect: dropshadow(gaussian, #34495E18, 14, 0.12, 0, 4);
+}
+.illustration-image {
+    -fx-effect: dropshadow(gaussian, #34495E22, 10, 0.19, 0, 3);
+    -fx-background-radius: 22px;
+}
+.illustration-caption {
+    -fx-text-fill: #34495E;
+    -fx-font-size: 17px;
+    -fx-font-family: 'Segoe UI Semibold', 'Calibri', Arial, sans-serif;
+    -fx-font-weight: 700;
+    -fx-padding: 14 0 0 0;
+    -fx-alignment: center;
+}
+
+/* ==== SPINNER ==== */
+.main-spinner, ProgressIndicator {
+    -fx-progress-color: #FF6F61;
+    -fx-background-color: transparent;
+}

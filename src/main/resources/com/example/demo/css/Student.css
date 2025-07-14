@@ -1,0 +1,161 @@
+/* ===== STUDENT MANAGEMENT BRANDING ===== */
+
+/* COLOR PALETTE (for reference)
+Primary   #355C7D
+Secondary #34495E
+Accent    #FF6F61
+Success   #2ECC71
+Warning   #F7B731
+Error     #E74C3C
+Neutral   #232323
+BG        #F8F9FA
+DrawerBG  #FFFDF6
+*/
+
+/* ---- BACKGROUND ---- */
+.root, .anchor-pane, AnchorPane {
+    -fx-background-color: #F8F9FA;
+    -fx-font-family: 'Segoe UI', 'Calibri', Arial, sans-serif;
+}
+
+/* ---- HEADER ---- */
+.header-bar {
+    -fx-background-color: #34495E;
+    -fx-effect: dropshadow(gaussian, #00000040, 8, 0.2, 0, 2);
+}
+.header-title {
+    -fx-text-fill: #fff;
+    -fx-font-family: 'Segoe UI', 'Calibri', Arial, sans-serif;
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+}
+.label, Label {
+    -fx-font-family: 'Segoe UI', 'Calibri', Arial, sans-serif;
+}
+
+/* ---- WELCOME LABEL ---- */
+#welcomeLabel, .welcome-label {
+    -fx-text-fill: #34495E;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+/* ---- SEARCH ---- */
+.search-label, Label[text="Search:"] {
+    -fx-text-fill: #34495E;
+    -fx-font-size: 15px;
+}
+.search-input, TextField {
+    -fx-background-color: #fff;
+    -fx-border-color: #355C7D;
+    -fx-border-radius: 6px;
+    -fx-font-size: 14px;
+    -fx-prompt-text-fill: #9da1a7;
+}
+.search-input:focused, TextField:focused {
+    -fx-border-color: #FF6F61;
+}
+
+/* ---- TABLE ---- */
+.table-view, TableView {
+    -fx-background-color: #FFFDF6;
+    -fx-border-color: #34495E;
+    -fx-font-size: 14px;
+    -fx-font-family: 'Segoe UI', 'Calibri', Arial, sans-serif;
+}
+.table-view .column-header-background, TableView .column-header-background {
+    -fx-background-color: #34495E;
+}
+.table-view .column-header .label, TableView .column-header .label {
+    -fx-text-fill: #fff;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+.table-view .cell, TableView .cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #232323;
+}
+.table-view .cell:selected, TableView .cell:selected {
+    -fx-background-color: #FF6F61;
+    -fx-text-fill: #fff;
+}
+/* Table row hover */
+.table-row-cell:hover .table-cell {
+    -fx-background-color: #eceff3;
+    -fx-text-fill: #232323;
+    -fx-cursor: hand;
+}
+/* Selected row always on top */
+.table-row-cell:filled:selected .table-cell,
+.table-row-cell:selected .table-cell {
+    -fx-background-color: #FF6F61;
+    -fx-text-fill: #fff;
+}
+
+/* ---- BUTTONS ---- */
+.button, Button {
+    -fx-background-radius: 6px;
+    -fx-font-family: 'Segoe UI', 'Calibri', Arial, sans-serif;
+    -fx-font-weight: 600;
+    -fx-font-size: 14px;
+    -fx-text-fill: #fff;
+    -fx-cursor: hand;
+    -fx-background-color: #355C7D;
+    -fx-effect: dropshadow(gaussian, #355C7D22, 2,0,0,1);
+}
+.button:hover, Button:hover {
+    -fx-background-color: #FF6F61;
+}
+.button:focused, Button:focused {
+    -fx-border-color: #FF6F61;
+    -fx-border-width: 2px;
+}
+.button:disabled, Button:disabled {
+    -fx-background-color: #ddd;
+    -fx-text-fill: #888;
+}
+/* Drawer Toggle & Close */
+#drawerCloseButton, #drawerToggleButton {
+    -fx-background-color: #34495E;
+    -fx-text-fill: #fff;
+    -fx-background-radius: 22px;
+    -fx-font-size: 18px;
+}
+#drawerCloseButton:hover, #drawerToggleButton:hover {
+    -fx-background-color: #355C7D;
+}
+/* Drawer Action Buttons */
+#logoutButton {
+    -fx-background-color: #E74C3C;
+    -fx-font-weight: bold;
+}
+#logoutButton:hover {
+    -fx-background-color: #FF6F61;
+}
+
+/* ---- DRAWER PANEL ---- */
+#drawerPane, .drawer-pane {
+    -fx-background-color: #FFFDF6;
+    -fx-border-color: #34495E;
+    -fx-border-width: 0 0 0 2px;
+    -fx-effect: dropshadow(gaussian, #bfbfbf, 10,0,0,1);
+}
+
+/* ---- PROGRESS INDICATOR ---- */
+.progress-indicator, ProgressIndicator {
+    -fx-progress-color: #FF6F61;
+    -fx-background-color: transparent;
+}
+
+/* ---- TOOLTIP ---- */
+.tooltip, Tooltip {
+    -fx-background-color: #34495E;
+    -fx-text-fill: #fff;
+    -fx-font-size: 13px;
+    -fx-background-radius: 8px;
+}
+
+/* ---- SEPARATOR ---- */
+.separator, Separator {
+    -fx-background-color: #34495E;
+}

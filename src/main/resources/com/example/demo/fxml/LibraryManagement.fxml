@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="714.0" prefWidth="914.0" stylesheets="@../css/Librarian.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controllers.LibrarianManagementController">
+
+
+    <children>
+        <!-- Header Bar -->
+        <AnchorPane layoutY="-8.0" prefHeight="90.0" prefWidth="914.0" styleClass="header-bar">
+            <children>
+                <Label layoutX="334.0" layoutY="26.0" styleClass="header-title" text="Librarian Management">
+                    <font>
+                        <Font name="Calibri Bold" size="32.0" />
+                    </font>
+                </Label>
+                <ImageView fx:id="backImage" fitHeight="38.0" fitWidth="52.0" layoutX="14.0" layoutY="26.0" onMouseClicked="#handleBack" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;" styleClass="back-arrow">
+                    <image>
+                        <Image url="@../Images/back.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <!-- Search -->
+        <Label layoutX="26.0" layoutY="94.0" styleClass="search-label" text="Search:" />
+        <TextField fx:id="searchField" layoutX="67.0" layoutY="90.0" prefHeight="30.0" prefWidth="202.0" promptText="Search by Title, Author, ISBN" styleClass="search-input">
+            <tooltip>
+                <Tooltip text="Type to filter books by Title, Author, or ISBN" />
+            </tooltip>
+        </TextField>
+        <!-- Main Content Tabs -->
+        <TabPane fx:id="tabPane" layoutX="26.0" layoutY="121.0" prefHeight="507.0" prefWidth="866.0" styleClass="main-tabs" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab fx:id="bookDetailsTab" text="Book Details">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="543.0" prefWidth="758.0">
+                            <children>
+                                <TableView fx:id="bookTable" prefHeight="486.0" prefWidth="864.0" styleClass="main-table">
+                                    <columns>
+                                        <TableColumn fx:id="titleColumn" prefWidth="212.8" text="Book Title" />
+                                        <TableColumn fx:id="authorColumn" prefWidth="191.2" text="Author" />
+                                        <TableColumn fx:id="isbnColumn" prefWidth="184.8" text="ISBN" />
+                                        <TableColumn fx:id="statusColumn" prefWidth="146.4" text="Status" />
+                                        <TableColumn fx:id="copiesColumn" minWidth="0.0" prefWidth="126.39996337890625" text="Copies" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="borrowedBooksTab" text="Borrowed Books">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TableView fx:id="borrowedBooksTable" layoutX="-1.0" prefHeight="466.0" prefWidth="866.0" styleClass="main-table">
+                                    <columns>
+                                        <TableColumn fx:id="borrowedBookTitleColumn" prefWidth="197.6" text="Book Title" />
+                                        <TableColumn fx:id="borrowerNameColumn" prefWidth="173.6" text="Borrower Name" />
+                                        <TableColumn fx:id="borrowDateColumn" prefWidth="149.6" text="Borrow Date" />
+                                        <TableColumn fx:id="dueDateColumn" minWidth="0.0" prefWidth="161.6" text="Due Date" />
+                                        <TableColumn fx:id="borrowedStatusColumn" maxWidth="482.4" minWidth="0.0" prefWidth="180.800048828125" text="Status" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+        <!-- Buttons Bar (aligned bottom) -->
+        <Button fx:id="returnBookButton" layoutX="410.0" layoutY="653.0" mnemonicParsing="false" onAction="#handleReturnBook" prefHeight="27.0" prefWidth="115.0" styleClass="action-btn" text="Return Book" />
+        <Button fx:id="addBookButton" layoutX="550.0" layoutY="653.0" mnemonicParsing="false" onAction="#handleAddBook" prefHeight="26.0" prefWidth="90.0" styleClass="primary-btn" text="Add Book" />
+        <Button fx:id="deleteBookButton" layoutX="668.0" layoutY="653.0" mnemonicParsing="false" onAction="#handleDeleteBook" prefHeight="26.0" prefWidth="99.0" styleClass="danger-btn" text="Delete Book" />
+        <Button fx:id="editBookButton" layoutX="791.0" layoutY="653.0" mnemonicParsing="false" onAction="#handleEditBook" prefHeight="27.0" prefWidth="99.0" styleClass="secondary-btn" text="Edit Book" />
+        <!-- Progress spinner (centered below button bar) -->
+        <ProgressIndicator fx:id="progressIndicator" layoutX="420.0" layoutY="370.0" prefHeight="79.0" prefWidth="238.0" styleClass="main-spinner" visible="false" />
+    </children>
+</AnchorPane>

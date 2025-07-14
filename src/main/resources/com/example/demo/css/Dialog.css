@@ -1,0 +1,67 @@
+/* ===== MODERN DIALOG CARD ===== */
+.dialog-card {
+    -fx-background-color: #FFFDF6;
+    -fx-background-radius: 26px;
+    -fx-border-radius: 26px;
+    -fx-effect: dropshadow(gaussian, #34495E33, 14, 0.18, 0, 4);
+}
+
+.dialog-title {
+    -fx-font-size: 21px;
+    -fx-font-family: 'Segoe UI Semibold', 'Calibri', Arial, sans-serif;
+    -fx-text-fill: #34495E;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 6 0;
+    -fx-alignment: center;
+}
+
+/* Table styling (reuse your table style or) */
+.main-table, TableView {
+    -fx-background-color: #F8F9FA;
+    -fx-background-radius: 14px;
+    -fx-font-size: 15px;
+    -fx-border-radius: 14px;
+}
+
+.main-table .column-header-background, TableView .column-header-background {
+    -fx-background-color: #34495E;
+    -fx-background-radius: 14px 14px 0 0;
+}
+.main-table .column-header .label, TableView .column-header .label {
+    -fx-text-fill: #fff;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+.main-table .cell, TableView .cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #232323;
+}
+.main-table .cell:selected, TableView .cell:selected {
+    -fx-background-color: #FF6F61;
+    -fx-text-fill: #fff;
+}
+.table-row-cell:filled:selected .table-cell,
+.table-row-cell:selected .table-cell {
+    -fx-background-color: #FF6F61;
+    -fx-text-fill: #fff;
+}
+
+.form-btn, .secondary-btn, Button {
+    -fx-background-color: #355C7D;
+    -fx-background-radius: 7px;
+    -fx-font-family: 'Segoe UI', 'Calibri', Arial, sans-serif;
+    -fx-font-size: 16px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #fff;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, #355C7D33, 2, 0.08, 0, 1);
+    -fx-padding: 8 0 8 0;
+    -fx-border-color: transparent;
+    -fx-border-width: 1px;
+    -fx-border-radius: 7px;
+    -fx-transition: background-color 0.18s;
+}
+.form-btn:hover, .secondary-btn:hover {
+    -fx-background-color: #FF6F61;
+}

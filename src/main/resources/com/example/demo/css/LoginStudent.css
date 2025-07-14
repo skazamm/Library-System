@@ -1,0 +1,122 @@
+/* ====== STUDENT LOGIN MODERN BRANDING ====== */
+
+/* ==== BACKGROUND ==== */
+.root, .anchor-pane, AnchorPane {
+    -fx-background-color: #F8F9FA;
+    -fx-font-family: 'Segoe UI', 'Calibri', Arial, sans-serif;
+    -fx-font-size: 15px;
+}
+
+/* ==== HEADER BAR ==== */
+.header-bar {
+    -fx-background-color: #34495E;
+    -fx-background-radius: 0 0 18px 18px;
+    -fx-effect: dropshadow(gaussian, #23232340, 7, 0.19, 0, 2);
+}
+.header-title {
+    -fx-text-fill: #fff;
+    -fx-font-family: 'Segoe UI Semibold', 'Calibri', Arial, sans-serif;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-effect: null;
+}
+
+/* ==== FORM PANEL ==== */
+.form-pane {
+    -fx-background-color: #E7ECF2;
+    -fx-background-radius: 0 0 36px 0;
+    -fx-min-width: 380px;
+}
+
+.form-section-label {
+    -fx-font-size: 18px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #34495E;
+    -fx-padding: 18 0 18 0;
+    -fx-alignment: center;
+}
+
+/* ==== FORM FIELDS ==== */
+.input-field, TextField, PasswordField {
+    -fx-background-color: #fff;
+    -fx-border-color: #355C7D;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 0 10 0 10;
+    -fx-font-size: 15px;
+    -fx-font-family: 'Segoe UI', 'Calibri', Arial, sans-serif;
+    -fx-prompt-text-fill: #a7a9ac;
+    -fx-text-fill: #34495E;
+    -fx-effect: null;
+    -fx-margin: 0 0 12px 0;
+    -fx-min-height: 32px;
+}
+.input-field:focused, TextField:focused, PasswordField:focused {
+    -fx-border-color: #FF6F61;
+    -fx-border-width: 2px;
+}
+
+/* ==== CHECKBOX ==== */
+.form-checkbox, CheckBox {
+    -fx-font-size: 14px;
+    -fx-text-fill: #34495E;
+    -fx-padding: 8 0 0 0;
+}
+
+/* ==== BUTTONS ==== */
+.form-btn, Button {
+    -fx-background-color: #355C7D;
+    -fx-background-radius: 8px;
+    -fx-font-size: 18px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #fff;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, #34495E33, 2, 0.09, 0, 1);
+    -fx-border-color: transparent;
+    -fx-padding: 8 0 8 0;
+    -fx-margin: 0 0 16px 0;
+    -fx-transition: background-color 0.18s, -fx-effect 0.18s;
+}
+.form-btn:hover, Button:hover {
+    -fx-background-color: #FF6F61;
+    -fx-effect: dropshadow(gaussian, #FF6F6122, 6, 0.18, 0, 2);
+}
+.form-btn:pressed, Button:pressed {
+    -fx-background-color: #2D445B;
+}
+.form-btn:focused, Button:focused {
+    -fx-border-color: #FF6F61;
+    -fx-border-width: 2px;
+}
+
+.secondary-btn {
+    -fx-background-color: #748FA7;
+}
+.secondary-btn:hover {
+    -fx-background-color: #FF6F61;
+}
+
+.form-message {
+    -fx-text-fill: #E74C3C;
+    -fx-font-size: 14px;
+    -fx-padding: 4 0 0 0;
+}
+
+/* ==== PROGRESS INDICATOR ==== */
+.progress-indicator, ProgressIndicator {
+    -fx-progress-color: #FF6F61;
+    -fx-background-color: transparent;
+}
+
+/* ==== ACCENT PANEL ==== */
+.login-illustration {
+    -fx-effect: dropshadow(gaussian, #34495E22, 14, 0.17, 0, 4);
+    -fx-background-radius: 28px;
+}
+
+@media screen and (max-width: 600px) {
+    .header-title { -fx-font-size: 20px; }
+    .form-pane { -fx-min-width: 100vw; }
+    .login-illustration { -fx-fit-width: 100vw; }
+}
