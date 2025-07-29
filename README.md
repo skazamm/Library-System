@@ -1,7 +1,7 @@
 # 📚 Library Management System
 
 A modern, user-friendly Library Management System built using **JavaFX**, **FXML**, and **PostgreSQL**.  
-This is side project I developed in my sophomore-year, UI/UX design, and database integration.
+This is a side project I developed in my sophomore-year, UI/UX design, and database integration.
 
 ---
 
@@ -21,7 +21,7 @@ This is side project I developed in my sophomore-year, UI/UX design, and databas
 - **Modern UI**: Custom CSS, dashboard cards, branded themes, and animated panels.
 - **Search & Filter**: Quickly find books by title, author, or ISBN.
 - **Notifications & User Profile**: View notifications and manage user profiles.
-- **Database Integration**: Uses PostgreSQL for all data management.
+- **Database Integration**: Uses PostgreSQL for all data management real-time.
 
 ---
 
@@ -33,7 +33,7 @@ This is side project I developed in my sophomore-year, UI/UX design, and databas
 - **PostgreSQL**
 - **Scene Builder** (for UI layout)
 - **Custom CSS** (for branding and modern look)
-
+- GPT-4.1 for faster progress and better approach for the project.
 ---
 
 ## 🖼️ Screenshots
@@ -56,13 +56,7 @@ This is side project I developed in my sophomore-year, UI/UX design, and databas
 2. **Open with IntelliJ IDEA or your preferred IDE.**
 3. **Import the PostgreSQL database using the included SQL script.**
 4. **Update the database connection settings in the code (`DBConnection.java`).**
-5. **Run the application (`PUPSIS.java` or main class).**
-
----
-
-## 📄 Project Structure
-
-
+5. **Run the application (`LibrarySystemApp)**
 
 ---
 
@@ -81,11 +75,6 @@ This is side project I developed in my sophomore-year, UI/UX design, and databas
 - AI integration
 ---
 
-## 📬 Contact
-
-Feel free to reach out for feedback, questions, or collaboration!
-
----
 
 
 
