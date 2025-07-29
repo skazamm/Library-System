@@ -1,7 +1,7 @@
 # 📚 Library Management System
 
 A modern, user-friendly Library Management System built using **JavaFX**, **FXML**, and **PostgreSQL**.  
-This project was developed by a second-year student as a hands-on exercise in software engineering, UI/UX design, and database integration.
+This is side project I developed in my sophomore-year, UI/UX design, and database integration.
 
 ---
 
